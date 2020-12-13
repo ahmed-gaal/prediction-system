@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container p-3 my-3 border">
+    <h1>Predict Sesame Seed Production</h1>
+    <p>The data used in the development of this system
+        has been obtained from the United Nations Food
+        and Agriculture Organisation public data repository.</p>
+  </div>
+  
+<div class="container">
+    <form action="{{url_for('predict')}}" method="POST">
+        <div class="form-group">
+            <label for="formAreaHarvested">Area Harvested (Hectares)</label>
+            <input name="Area Harvested" type="text" class="form-control" id="areaharvested" placeholder="Enter the Area Harvested">
+        </div>
+        <div class="form-group">
+            <label for="formYear">Yield (Tonne per Hectare)</label>
+            <input name="year" type="text" class="form-control" id="yield" placeholder="Enter the Yield Expected">
+        </div>
+        <button id="sendprediction" type="submit" class="btn btn-success">Predict</button>
+    </form>
+    <br>
+    <br>
+    {{prediction_text}}
+</div>
+{% endblock %}
