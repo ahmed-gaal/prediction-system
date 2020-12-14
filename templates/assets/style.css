@@ -1,0 +1,22 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+html, body {
+  margin:0px;
+  height:100%;
+}
+.page-holder .bg-cover {
+  min-height: 100vh;
+  background-size: cover !important;
+  height:100%;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+}
