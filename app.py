@@ -1,6 +1,7 @@
 '''This is a script to create API for predictions using our machine learing
     model.
 '''
+
 import pickle
 import numpy as np
 from flask import Flask, request, render_template
@@ -31,4 +32,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=6060)
+    app.run()
