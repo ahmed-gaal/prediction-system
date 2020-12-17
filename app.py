@@ -1,6 +1,5 @@
 
-"""This is a script to create API for predictions using our machine learning
-model."""
+"""This script creates API for predictions using a machine learning model."""
 
 import pickle
 import numpy as np
