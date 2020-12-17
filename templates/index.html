@@ -1,19 +1,32 @@
 {% extends "base.html" %}
 {% block body %}
-<div style="background: url(http://hgtvhome.sndimg.com/content/dam/images/grdn/fullset/2014/3/19/0/sesame-seeds.jpg.rend.hgtvcom.1280.853.suffix/1452647483384.jpeg)" 
-    class="page-holder bg-cover">
-    <div class="container p-3 my-3 border">
+<div style="height: 90vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+  background: url(http://hgtvhome.sndimg.com/content/dam/images/grdn/fullset/2014/3/19/0/sesame-seeds.jpg.rend.hgtvcom.1280.853.suffix/1452647483384.jpeg);
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  ">
+
+  <div class="container" style="background: black;  opacity: 0.8;">
+    <div class="container">
       <h1>Predict Sesame Seed Production</h1>
-      <p>The data used in the development of this system
-        has been obtained from the United Nations Food
-        and Agriculture Organisation public data repository.</p>
+      <p>This is a Machine Learning based Prediction system.
+        Input the Area Harvested and the Yield you expect to obtain
+        and estimated Production quantity.
+      </p>
     </div>
-  
+
     <div class="container">
       <form action="{{url_for('predict')}}" method="POST">
         <div class="form-group">
           <label for="formAreaHarvested">Area Harvested (Hectares)</label>
-          <input name="Area Harvested" type="text" class="form-control" id="areaharvested" placeholder="Enter the Area Harvested">
+          <input name="Area Harvested" type="text" class="form-control" id="areaharvested"
+            placeholder="Enter the Area Harvested">
         </div>
         <div class="form-group">
           <label for="formYear">Yield (Tonne per Hectare)</label>
@@ -25,6 +38,7 @@
       <br>
       <h4>{{prediction_text}}</h4>
     </div>
+  </div>
 </div>
-  
+
 {% endblock %}
